@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="App" ng-controller="AppController as appCtrl">
+<head>
+    <meta charset="utf-8">
+    <meta name="fragment" content="!">
+    <meta ng-if="appCtrl.mobileDetect.phone()" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta ng-if="!appCtrl.mobileDetect.phone()" name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:locale" content="">
+    <meta property="og:type" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+
+    <base href="/">
+
+    <script src="app/app.pkgd.js?version=2732010aea8b32dd962397e1e2f1dda2ee15fabd"></script>
+    <script src="app/tpl.pkgd.js?version=2732010aea8b32dd962397e1e2f1dda2ee15fabd"></script>
+
+    <link rel="icon" href="app/img/main/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="app/main/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300"/>
+    <link rel="stylesheet" type="text/css" href="app/css/main.css?version=2732010aea8b32dd962397e1e2f1dda2ee15fabd">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <script src="app/js/owl.carousel.min.js"></script>
+    <script src="app/js/parallax.min.js"></script>
+    <script src="app/js/wow.js"></script>
+
+    <link rel="apple-touch-icon" href="app/img/main/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="app/img/main/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="app/img/main/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="app/img/main/apple-touch-icon-152x152.png">
+
+    <title>Mobulum</title>
+</head>
+
+<body>
+    <div ui-view="header"></div>
+    <div ui-view="main" role="main" class="main"></div>
+    <div ui-view="footer"></div>
+</body>
+
+</html>
