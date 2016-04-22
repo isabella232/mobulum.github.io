@@ -1,68 +1,109 @@
 <!DOCTYPE html>
 <html ng-app="App" ng-controller="AppController as appCtrl">
 <head>
-    <meta charset="utf-8">
-    <meta name="fragment" content="!">
-    <meta name="author" content="contact@mobulum.com">
-    <meta ng-if="appCtrl.mobileDetect.phone()" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta ng-if="!appCtrl.mobileDetect.phone()" name="viewport" content="width=device-width">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="keywords" content="mobile, applications, development,ux,windows-phone,ios,android">
-    <meta name="description" content="mobulum.com - mobile applications">
-    <meta property="og:title" content="mobulum">
-    <meta property="og:description" content="mobulum.com - mobile applications">
-    <meta property="og:site_name" content="mobulum.com">
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="pl_PL" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://mobulum.com/app/img/main/favicon-192x192.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="192" />
-    <meta property="og:image:height" content="192" />
-    <meta property="og:url" content="http://mobulum.com">
+  <meta charset="utf-8">
+  <meta ng-if="appCtrl.mobileDetect.phone()" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta ng-if="!appCtrl.mobileDetect.phone()" name="viewport" content="width=device-width">
+  <meta name="keywords" content="studio,mobile,applications,development,ux,windows-phone,ios,android,loteria,paragonowa,festivale,konwenty,safe,bus,bezpieczny,autobus,historia,pojazdu,vehicle,history">
+  <meta name="description" content="mobile applications development studio">
+  <meta name="subject" content="mobile applications development">
+  <meta name="language" content="en">
+  <meta name="robots" content="index,follow">
+  <meta name="abstract" content="">
+  <meta name="topic" content="">
+  <meta name="summary" content="">
+  <meta name="classification" content="business">
+  <meta name="author" content="webmaster@mobulum.com">
+  <meta name="designer" content="webmaster@mobulum.com">
+  <meta name="reply-to" content="webmaster@mobulum.com">
+  <meta name="owner" content="contact@mobulum.com">
+  <meta name="url" content="http://mobulum.com/">
+  <meta name="identifier-URL" content="http://mobulum.com/">
+  <meta name="directory" content="submission">
+  <meta name="category" content="">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="rating" content="General">
+  <meta name="revisit-after" content="7 days">
+  <meta name="fragment" content="!">
 
-    <base href="/">
 
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <link rel="icon" type="image/png" href="app/img/main/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="app/img/main/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="app/img/main/favicon-48x48.png" sizes="48x48">
+  <link rel="icon" type="image/png" href="app/img/main/favicon-62x62.png" sizes="62x62">
+  <link rel="icon" type="image/png" href="app/img/main/favicon-192x192.png" sizes="192x192">
 
-        ga('create', 'UA-76488186-1', 'auto');
+  <link rel="icon" href="app/img/main/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="app/main/favicon.png" type="image/png">
 
-    </script>
-    <script src="app/app.pkgd.js?version=27e7859efab49fede33b12c5376d51f9bbac9885"></script>
-    <script src="app/tpl.pkgd.js?version=27e7859efab49fede33b12c5376d51f9bbac9885"></script>
+  <meta property="og:title" content="mobulum">
+  <meta property="og:description" content="mobulum.com - mobile applications development studio">
+  <meta property="og:site_name" content="mobulum.com">
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:locale:alternate" content="pl_PL"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="http://mobulum.com/app/img/main/favicon-192x192.png"/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:width" content="192"/>
+  <meta property="og:image:height" content="192"/>
+  <meta property="og:url" content="http://mobulum.com">
 
-    <link rel="icon" type="image/png" href="app/img/main/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="app/img/main/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="app/img/main/favicon-192x192.png" sizes="192x192">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@mobulum_com">
+  <meta name="twitter:creator" content="@mobulum_com">
+  <meta name="twitter:title" content="mobulum.com">
+  <meta name="twitter:description" content="mobile applications development studio">
+  <meta name="twitter:image" content="http://mobulum.com/app/img/main/favicon-192x192.png">
 
-    <link rel="apple-touch-icon" href="app/img/main/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="app/img/main/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="app/img/main/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="app/img/main/apple-touch-icon-152x152.png">
 
-    <link rel="icon" href="app/img/main/favicon.png" type="image/png">
-    <link rel="shortcut icon" href="app/main/favicon.png" type="image/png">
+  <meta name="apple-mobile-web-app-title" content="mobulum.com">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-touch-fullscreen" content="yes">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300"/>
-    <link rel="stylesheet" type="text/css" href="app/css/main.css?version=27e7859efab49fede33b12c5376d51f9bbac9885">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="app/img/main/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="app/img/main/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="app/img/main/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="app/img/main/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="app/img/main/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-startup-image" href="app/img/main/apple-touch-icon-180x180.png">
 
-    <script src="app/js/parallax.min.js"></script>
-    <script src="app/js/wow.js"></script>
+  <base href="https://mobulum.com/">
 
-    <title>Mobulum</title>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-76488186-1', 'auto');
+
+  </script>
+  <script src="app/app.pkgd.js?version=00115a0c50c80f5abfb4030bc3da336608ca4c78"></script>
+  <script src="app/tpl.pkgd.js?version=00115a0c50c80f5abfb4030bc3da336608ca4c78"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300"/>
+  <link rel="stylesheet" type="text/css" href="app/css/main.css?version=00115a0c50c80f5abfb4030bc3da336608ca4c78">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <script src="app/js/parallax.min.js"></script>
+  <script src="app/js/wow.js"></script>
+
+  <title>Mobulum.com</title>
 </head>
 
 <body>
-    <div ui-view="header"></div>
-    <div ui-view="main" role="main" class="main"></div>
-    <div ui-view="footer"></div>
+<div ui-view="header"></div>
+<div ui-view="main" role="main" class="main"></div>
+<div ui-view="footer"></div>
 </body>
 
 </html>
