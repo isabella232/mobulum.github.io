@@ -6,7 +6,7 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('common/footer/footer.tpl.html',
-    '<footer><div class="container"><div class="col-xs-4">Copyright {{ footerCtrl.getDate() | date:\'yyyy\' }}</div><div class="col-xs-8"><ul class="footer-menu"><li scroll-to="contact"><a href="#contact">{{ \'Contact\' | translate }}</a></li><li>T: <a href="tel:606248270">606 248 270</a></li><li>M: <a href="mailto:contact@mobulum.com">contact@mobulum.com</a></li><li><a href="https://www.facebook.com/mobulum/"><i class="fa fa-facebook"></i></a></li><li><a href="http://twitter.com/mobulum_com"><i class="fa fa-twitter"></i></a></li></ul></div></div></footer>');
+    '<footer><div class="container"><div class="col-xs-4">Copyright {{ footerCtrl.getDate() | date:\'yyyy\' }}</div><div class="col-xs-8"><ul class="footer-menu"><li scroll-to="contact"><a href="#contact">{{ \'Contact\' | translate }}</a></li><li>T: <a href="tel:606248270">606 248 270</a></li><li>M: <a href="mailto:web@mobulum.com">web@mobulum.com</a></li><li><a href="https://www.facebook.com/mobulum/"><i class="fa fa-facebook"></i></a></li><li><a href="http://twitter.com/mobulum_com"><i class="fa fa-twitter"></i></a></li></ul></div></div></footer>');
 }]);
 })();
 
